@@ -104,15 +104,11 @@ function createResultHtml (leftOperandValue, rightOperandValue, operatorValue, r
   return `
   <div style="margin: 10px 0">
     <input disabled value="${leftOperandValue}">
-
     <select disabled>
       ${selectedOptionHtml}
     </select>
-
     <input disabled value="${rightOperandValue}">
-
     <button disabled>=</button>
-
     <span>${resultValue}</span>
   </div>
   `;
