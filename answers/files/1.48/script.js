@@ -20,7 +20,7 @@ function onSubmit () {
   console.log('onSubmit')
   switch (operatorValue) {
     case 'ADDITION' :
-      value = leftOperandElement.value + rightOperandElement.value;
+      value = Number(leftOperandElement.value) + Number(rightOperandElement.value);
       operator = '+';
       break;
     case 'SUBTRACTION' :
@@ -48,30 +48,11 @@ function onSubmit () {
       operator = '√';
       break;
   }
-  setResult(value);
   setExpression(`${leftOperandElement.value}${operator}${rightOperandElement.value}`);
+  setResult(value);
 }
 
 function onClear () {
   console.log('onClear')
   setExpression('');
 }
-
-switch (operatorValue) {
-  case 'ADDITION' :
-  case 'SUBTRACTION' :
-  case 'MULTIPLICATION' :
-  case 'EXPONENTIATION' :
-  case 'DIVISION' :
-  case 'MODULUS' :
-  case 'ROOT' :
-}
-/*
-+
--
-*
-**
-/
-%
-**(1/)
-*/
