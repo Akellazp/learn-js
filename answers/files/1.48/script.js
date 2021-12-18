@@ -1,4 +1,6 @@
 let operator = '+';
+let previousExpression;
+let firtsResultCheck = true;
 
 function onLeftOperandChange(value) {
   console.log('onLeftOperandChange', value)
@@ -65,7 +67,14 @@ function onSubmit () {
       value = leftOperandElement.value ** (1 / rightOperandElement.value);
       break;
   }
-  setExpression(`${leftOperandElement.value}${operator}${rightOperandElement.value}`);
+  if(firtsResultCheck){
+    setExpression(`${leftOperandElement.value}${operator}${rightOperandElement.value}`);
+    previousExpression = `(${leftOperandElement.value}${operator}${rightOperandElement.value})`;
+    firtsResultCheck = false;
+  } else {
+    setExpression(`${previousExpression}${operator}${rightOperandElement.value}`)
+    previousExpression = `(${previousExpression}${operator}${rightOperandElement.value})`;
+  }
   setResult(value);
 }
 
