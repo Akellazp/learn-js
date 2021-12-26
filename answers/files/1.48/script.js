@@ -5,13 +5,11 @@ let firtsResultCheck = true;
 function onLeftOperandChange(value) {
   console.log('onLeftOperandChange', value)
   leftOperandElement.value = value;
-  setExpression(`${leftOperandElement.value}${operator}${rightOperandElement.value}`)
 }
 
 function onRightOperandChange(value) {
   console.log('onRightOperandChange', value)
   rightOperandElement.value = value;
-  setExpression(`${leftOperandElement.value}${operator}${rightOperandElement.value}`)
 }
 
 function onOperatorChange(value) {
@@ -39,7 +37,6 @@ function onOperatorChange(value) {
       operator = '√';
       break;
   }
-  setExpression(`${leftOperandElement.value}${operator}${rightOperandElement.value}`)
 }
 
 function onSubmit () {
