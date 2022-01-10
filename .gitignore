@@ -37,3 +37,4 @@ lerna-debug.log*
 .env
 var
 google-creds.json
+answers/files/1.3/script.js
