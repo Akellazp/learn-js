@@ -1,18 +1,7 @@
-class Chameleon {
-    constructor({ newColor = "green" } = {}) {
-      this.newColor = newColor;
-    }
-    
-    static colorChange(newColor) {
-      this.newColor = newColor;
-    }
-    
-    getColor() {
-      return this.newColor;
-    }
-  }
-  
-  const freddie = new Chameleon();
-  Chameleon.colorChange("orange");
-  const color = freddie.getColor();
-  console.log(color);
+function sum (...args) {
+  return args.reduce((acc, num) => acc + num, 0) * this;
+}
+
+const multiplier = 1
+
+sum = sum.bind(multiplier)
